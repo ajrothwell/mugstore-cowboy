@@ -3,64 +3,16 @@
     <section class="section">
       <div class="container">
         <h1 class="title">
-          Mugstore Cowboy
+          Mugstore Cowboy Coasters
         </h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
         <p class="subtitle">
-          Welcome to Mugstore Cowboy!
+          Coasters
         </p>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-
-        <router-link
-          to="/mugs"
-        >
-          <!-- custom -->
-          <p class="subtitle">
-            Mugs
-          </p>
-          <!-- v-slot="{ href, route, navigate, isActive, isExactActive }" -->
-          <!-- <NavLink :active="isActive" :href="href" @click="navigate"
-            >{{ route.fullPath }}</NavLink
-          > -->
-        </router-link>
-
-        <div class="columns">
-          <div
-            v-for="mug in mugsPreview"
-            :key="mug.id"
-            class="column is-3"
-          >
-            {{ mug.fields.name }}
-            <photo
-              :item="mug.fields"
-            >
-            </photo>
-            <!-- <img :src="imgsrc"></img> -->
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-
-        <router-link
-          to="/coasters"
-        >
-          <!-- custom -->
-          <p class="subtitle">
-            Coasters
-          </p>
-          <!-- v-slot="{ href, route, navigate, isActive, isExactActive }" -->
-          <!-- <NavLink :active="isActive" :href="href" @click="navigate"
-            >{{ route.fullPath }}</NavLink
-          > -->
-        </router-link>
-
         <div class="columns">
           <div
             v-for="coaster in coastersPreview"
