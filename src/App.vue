@@ -8,6 +8,7 @@
   </div>
 </template>
 
+
 <script>
 
 import 'bulma/css/bulma.css';
