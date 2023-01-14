@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div> -->
     <section>
       <div class="container has-text-centered">
         <h2 class="item-name">
@@ -15,7 +15,7 @@
         </div>
       </div>
     </section>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div> -->
     <section>
       <div class="container">
 
@@ -19,13 +19,13 @@
                 :item="coaster.fields"
               >
               </photo>
-              <!-- </div> -->
+              
             </router-link>
           </div>
         </div>
       </div>
     </section>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>

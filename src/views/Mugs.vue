@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div> -->
     <section>
       <div class="container">
 
@@ -7,7 +7,7 @@
           <div
             v-for="mug in mugsPreview"
             :key="mug.id"
-            class="column is-4"
+            class="column is-4-desktop is-6-tablet"
           >
             <router-link
               :to="'/mug/'+mug.fields.id"
@@ -19,7 +19,6 @@
                 :item="mug.fields"
               >
               </photo>
-              <!-- </div> -->
 
             </router-link>
           </div>
@@ -27,7 +26,7 @@
       </div>
     </section>
 
-  </div>
+  <!-- </div> -->
 
 </template>
 
@@ -49,11 +48,3 @@ export default {
 };
 
 </script>
-
-<style>
-
-/* .columns {
-  flex-wrap: wrap;
-} */
-
-</style>

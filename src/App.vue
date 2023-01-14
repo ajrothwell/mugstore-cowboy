@@ -1,22 +1,28 @@
 <template>
-  <div id="app">
-    
-    <section class="section">
-      <div class="container has-text-centered">
-        <h1 class="title">
-          Mugstore Cowboy
-        </h1>
-        <div id="nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
-          <router-link to="/Mugs">Mugs</router-link> |
-          <router-link to="/Coasters">Coasters</router-link>
+  <div class="full-app">
+    <div
+      class="container is-max-desktop main-app"
+    >
+    <!-- id="app" -->
+      
+      <!-- <section class="section"> -->
+      <section>
+        <div class="container has-text-centered">
+          <h1 class="title">
+            Mugstore Cowboy
+          </h1>
+          <div id="nav">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/about">About</router-link> |
+            <router-link to="/Mugs">Mugs</router-link> |
+            <router-link to="/Coasters">Coasters</router-link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <router-view />
+      <router-view />
 
+    </div>
   </div>
 </template>
 
@@ -68,29 +74,81 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50; */
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
   padding: 2rem;
 }
 
+.full-app {
+  height: 100%;
+  min-height: 100vh;
+  background-color: black;
+  padding: 1.5rem;
+}
+
+.main-app {
+  background-color: white;
+  padding: 2rem;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
+}
+
 .title {
-  /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 4rem;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  color: #a068e8;
+  -webkit-text-stroke: 0.001rem black;
+  /* -webkit-text-stroke: 1px black; */
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+  /* text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black; */
+  font-size: 7rem;
+  line-height: .85;
   text-transform: uppercase;
 }
 
-.item-title {
+.section-title {
   font-size: 1.5rem;
   padding: 1rem;
 }
 
-@media (max-width: 768px) {
+.item-title {
+  font-size: 1.4rem;
+  padding: 1rem;
+  min-height: 100px;
+}
+
+@media (max-width: 600px) {
+
   .title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+  }
+
+  .main-app {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  .title {
+    font-size: 4.5rem;
+  }
+
+  .main-app {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .full-app {
+    padding: 0rem;
   }
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
 }
 
 #nav a {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div> -->
     <section>
       <div class="container">
 
@@ -10,7 +10,7 @@
             <router-link
               to="/mugs"
             >
-              <div class="subtitle">
+              <div class="section-title">
                 Mugs
               </div>
               
@@ -34,9 +34,9 @@
             <router-link
               to="/coasters"
             >
-              <p class="subtitle">
+              <div class="section-title">
                 Coasters
-              </p>
+              </div>
               
               <div class="columns">
                 <div
@@ -59,7 +59,7 @@
 
       </div>
     </section>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
