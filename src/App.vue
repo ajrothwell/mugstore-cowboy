@@ -94,8 +94,8 @@ export default {
 }
 
 .title {
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #a068e8;
   -webkit-text-stroke: 0.001rem black;
   /* -webkit-text-stroke: 1px black; */
@@ -121,7 +121,7 @@ export default {
 @media (max-width: 600px) {
 
   .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .main-app {
@@ -132,7 +132,7 @@ export default {
 
 @media (min-width: 601px) and (max-width: 767px) {
   .title {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 
   .main-app {
@@ -144,6 +144,10 @@ export default {
 @media (max-width: 767px) {
   .full-app {
     padding: 0rem;
+  }
+
+  .item-title {
+    min-height: 0px;
   }
 }
 
