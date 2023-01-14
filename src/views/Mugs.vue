@@ -7,18 +7,19 @@
           <div
             v-for="mug in mugsPreview"
             :key="mug.id"
-            class="column is-3"
+            class="column is-4"
           >
             <router-link
               :to="'/mug/'+mug.fields.id"
             >
-              <div class="has-text-centered">
+              <div class="item-title has-text-centered">
                 {{ mug.fields.name }}
-                <photo
-                  :item="mug.fields"
-                >
-                </photo>
               </div>
+              <photo
+                :item="mug.fields"
+              >
+              </photo>
+              <!-- </div> -->
 
             </router-link>
           </div>

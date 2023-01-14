@@ -7,18 +7,19 @@
           <div
             v-for="coaster in coastersPreview"
             :key="coaster.id"
-            class="column is-3"
+            class="column is-4"
           >
             <router-link
               :to="'/coaster/'+coaster.fields.id"
             >
-              <div class="has-text-centered">
+              <div class="item-title has-text-centered">
                 {{ coaster.fields.name }}
-                <photo
-                  :item="coaster.fields"
-                >
-                </photo>
               </div>
+              <photo
+                :item="coaster.fields"
+              >
+              </photo>
+              <!-- </div> -->
             </router-link>
           </div>
         </div>
@@ -44,11 +45,3 @@ export default {
 };
 
 </script>
-
-<style>
-
-/* .columns {
-  flex-wrap: wrap;
-} */
-
-</style>

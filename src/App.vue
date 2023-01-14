@@ -78,6 +78,17 @@ export default {
   text-transform: uppercase;
 }
 
+.item-title {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
 #nav {
   padding: 30px;
 }
