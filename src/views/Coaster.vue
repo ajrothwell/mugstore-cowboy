@@ -6,7 +6,7 @@
           {{ currentCoaster.fields.name }} Coaster
         </h2>
         <div class="columns">
-          <div class="column is-half is-offset-one-quarter">
+          <div class="column is-8 is-offset-2">
             <photo-carousel
               :item="currentCoaster"
             >

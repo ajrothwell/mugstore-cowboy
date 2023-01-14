@@ -68,17 +68,6 @@ export default {
 
 <style>
 
-#app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50; */
-  /* padding-left: 2rem;
-  padding-right: 2rem; */
-  padding: 2rem;
-}
-
 .full-app {
   height: 100%;
   min-height: 100vh;
@@ -125,8 +114,8 @@ export default {
   }
 
   .main-app {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -136,8 +125,13 @@ export default {
   }
 
   .main-app {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .carousel-holder {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 

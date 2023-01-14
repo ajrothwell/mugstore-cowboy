@@ -1,7 +1,26 @@
 <template>
   <div class="main-content">
+    
+    <div
+      v-if="picsLength"
+      >
+      <!-- class="column is-8 has-text-centered" -->
+      <div class="image-div">
+        <img
+          class="rounded-square"
+          :src="imgsrc"
+        >
+      </div>
+    </div>
+    <div
+      v-if="!picsLength"
+      >
+      <!-- class="column is-8 has-text-centered" -->
+      No photos
+    </div>
+
     <div class="columns is-vcentered is-mobile">
-      <div class="column is-2 has-text-centered">
+      <div class="column is-2 is-offset-4 has-text-centered">
         <button
           v-show="photoNumber+1>1"
           class="button square-button"
@@ -9,25 +28,6 @@
         >
           <font-awesome-icon icon="arrow-left" />
         </button>
-      </div>
-      <div
-        v-if="picsLength"
-        class="column is-8 has-text-centered"
-      >
-        <div
-          class="image-div"
-        >
-          <img
-            class="rounded-square"
-            :src="imgsrc"
-          >
-        </div>
-      </div>
-      <div
-        v-if="!picsLength"
-        class="column is-8 has-text-centered"
-      >
-        No photos
       </div>
       <div class="column is-2 has-text-centered">
         <button
@@ -39,6 +39,7 @@
         </button>
       </div>
     </div>
+      
   </div>
 </template>
 
