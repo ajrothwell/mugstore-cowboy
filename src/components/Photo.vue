@@ -2,9 +2,9 @@
   <div>
     <img
       v-if="item.pictures"
+      class="circle"
       :src="item.pictures[0].thumbnails.full.url"
     />
-    <!-- </img> -->
   </div>
 </template>
 
@@ -21,4 +21,5 @@ export default {
     },
   },
 };
+
 </script>

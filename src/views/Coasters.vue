@@ -1,18 +1,8 @@
 <template>
   <div>
-    <section class="section">
-      <div class="container">
-        <h1 class="title">
-          Mugstore Cowboy Coasters
-        </h1>
-      </div>
-    </section>
-
     <section>
       <div class="container">
-        <p class="subtitle">
-          Coasters
-        </p>
+
         <div class="columns">
           <div
             v-for="coaster in coastersPreview"
@@ -22,11 +12,13 @@
             <router-link
               :to="'/coaster/'+coaster.fields.id"
             >
-              {{ coaster.fields.name }}
-              <photo
-                :item="coaster.fields"
-              >
-              </photo>
+              <div class="has-text-centered">
+                {{ coaster.fields.name }}
+                <photo
+                  :item="coaster.fields"
+                >
+                </photo>
+              </div>
             </router-link>
           </div>
         </div>
@@ -37,18 +29,16 @@
 
 <script>
 
-// import PhotoCarousel from '@/components/PhotoCarousel.vue';
 import Photo from '@/components/Photo.vue';
 
 export default {
   name: 'Home',
   components: {
     Photo,
-    // PhotoCarousel,
   },
   computed: {
     coastersPreview() {
-      return this.$store.state.sources.coasters.data.slice(0, 3);
+      return this.$store.state.sources.coasters.data;
     },
   },
 };
@@ -56,10 +46,9 @@ export default {
 </script>
 
 <style>
-/* @import 'bulma/css/bulma.css'; */
 
-.columns {
+/* .columns {
   flex-wrap: wrap;
-}
+} */
 
 </style>

@@ -1,81 +1,62 @@
 <template>
   <div>
-    <section class="section">
-      <div class="container">
-        <h1 class="title">
-          Mugstore Cowboy
-        </h1>
-        <p class="subtitle">
-          Welcome to Mugstore Cowboy!
-        </p>
-      </div>
-    </section>
-
     <section>
       <div class="container">
 
-        <router-link
-          to="/mugs"
-        >
-          <!-- custom -->
-          <p class="subtitle">
-            Mugs
-          </p>
-          <!-- v-slot="{ href, route, navigate, isActive, isExactActive }" -->
-          <!-- <NavLink :active="isActive" :href="href" @click="navigate"
-            >{{ route.fullPath }}</NavLink
-          > -->
-        </router-link>
-
         <div class="columns">
-          <div
-            v-for="mug in mugsPreview"
-            :key="mug.id"
-            class="column is-3"
-          >
-            {{ mug.fields.name }}
-            <photo
-              :item="mug.fields"
+
+          <div class="column is-6 has-text-centered">
+
+            <router-link
+              to="/mugs"
             >
-            </photo>
-            <!-- <img :src="imgsrc"></img> -->
-
+              <div class="subtitle">
+                Mugs
+              </div>
+              
+              <div class="columns">
+                <div
+                  v-for="mug in mugsPreview"
+                  :key="mug.id"
+                  class="column is-8 is-offset-2"
+                >
+                  <photo
+                    :item="mug.fields"
+                  >
+                  </photo>
+                  
+                </div>
+              </div>
+            </router-link>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="container">
-
-        <router-link
-          to="/coasters"
-        >
-          <!-- custom -->
-          <p class="subtitle">
-            Coasters
-          </p>
-          <!-- v-slot="{ href, route, navigate, isActive, isExactActive }" -->
-          <!-- <NavLink :active="isActive" :href="href" @click="navigate"
-            >{{ route.fullPath }}</NavLink
-          > -->
-        </router-link>
-
-        <div class="columns">
-          <div
-            v-for="coaster in coastersPreview"
-            :key="coaster.id"
-            class="column is-3"
-          >
-            {{ coaster.fields.name }}
-            <photo
-              :item="coaster.fields"
+          <div class="column is-6 has-text-centered">
+            <router-link
+              to="/coasters"
             >
-            </photo>
-            <!-- <img :src="imgsrc"></img> -->
-
+              <p class="subtitle">
+                Coasters
+              </p>
+              
+              <div class="columns">
+                <div
+                  v-for="coaster in coastersPreview"
+                  :key="coaster.id"
+                  class="column is-8 is-offset-2"
+                  >
+                  <photo
+                    :item="coaster.fields"
+                    >
+                  </photo>
+                  
+                </div>
+              </div>
+            </router-link>
           </div>
+
+
         </div>
+
       </div>
     </section>
   </div>
@@ -83,40 +64,22 @@
 
 <script>
 
-// import PhotoCarousel from '@/components/PhotoCarousel.vue';
 import Photo from '@/components/Photo.vue';
 
 export default {
   name: 'Home',
   components: {
     Photo,
-    // PhotoCarousel,
   },
-  // data() {
-  //   return {
-  //     sources: {
-  //       mugs: [],
-  //     },
-  //   };
-  // },
   computed: {
     mugsPreview() {
       // console.log('mugsPreview computed, this.$store.state.sources.mugs.data:', this.$store.state.sources.mugs.data);
-      return this.$store.state.sources.mugs.data.slice(0, 3);
+      return this.$store.state.sources.mugs.data.slice(8, 9);
     },
     coastersPreview() {
-      return this.$store.state.sources.coasters.data.slice(0, 3);
+      return this.$store.state.sources.coasters.data.slice(2, 3);
     },
   },
 };
 
 </script>
-
-<style>
-/* @import 'bulma/css/bulma.css'; */
-
-.columns {
-  flex-wrap: wrap;
-}
-
-</style>

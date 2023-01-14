@@ -7,7 +7,6 @@
           class="button square-button"
           @click="changePhotoNumber('down')"
         >
-          <!-- <i class="fa-solid fa-user"></i> -->
           <font-awesome-icon icon="arrow-left" />
         </button>
       </div>
@@ -18,9 +17,11 @@
         <div
           class="image-div"
         >
-          <img :src="imgsrc">
+          <img
+            class="rounded-square"
+            :src="imgsrc"
+          >
         </div>
-        Date: {{ photoDate }}
       </div>
       <div
         v-if="!picsLength"
@@ -34,7 +35,6 @@
           class="button square-button"
           @click="changePhotoNumber('up')"
         >
-          <!-- <i class="fa-solid fa-user"></i> -->
           <font-awesome-icon icon="arrow-right" />
         </button>
       </div>
@@ -128,17 +128,16 @@ export default {
 
 </script>
 
-<!-- <style lang="scss"> -->
 <style>
-
-table {
-  border: 0px none;
-  border-style: none !important;
-}
 
 .square-button {
   width: 46px;
 }
+
+/* table {
+  border: 0px none;
+  border-style: none !important;
+} */
 
 /* .image-div {
   min-height: 540px;

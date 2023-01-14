@@ -13,8 +13,6 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 library.add(faArrowRight, faArrowLeft);
 
-// Vue.use(fonts);
-
 new Vue({
   router,
   store,

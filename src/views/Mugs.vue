@@ -1,18 +1,8 @@
 <template>
   <div>
-    <section class="section">
-      <div class="container">
-        <h1 class="title">
-          Mugstore Cowboy Mugs
-        </h1>
-      </div>
-    </section>
-    
     <section>
       <div class="container">
-        <p class="subtitle">
-          Mugs
-        </p>
+
         <div class="columns">
           <div
             v-for="mug in mugsPreview"
@@ -22,11 +12,13 @@
             <router-link
               :to="'/mug/'+mug.fields.id"
             >
-              {{ mug.fields.name }}
-              <photo
-                :item="mug.fields"
-              >
-              </photo>
+              <div class="has-text-centered">
+                {{ mug.fields.name }}
+                <photo
+                  :item="mug.fields"
+                >
+                </photo>
+              </div>
 
             </router-link>
           </div>
@@ -40,22 +32,13 @@
 
 <script>
 
-// import PhotoCarousel from '@/components/PhotoCarousel.vue';
 import Photo from '@/components/Photo.vue';
 
 export default {
   name: 'Home',
   components: {
     Photo,
-    // PhotoCarousel,
   },
-  // data() {
-  //   return {
-  //     sources: {
-  //       mugs: [],
-  //     },
-  //   };
-  // },
   computed: {
     mugsPreview() {
       // console.log('mugsPreview computed, this.$store.state.sources.mugs.data:', this.$store.state.sources.mugs.data);
@@ -67,10 +50,9 @@ export default {
 </script>
 
 <style>
-/* @import 'bulma/css/bulma.css'; */
 
-.columns {
+/* .columns {
   flex-wrap: wrap;
-}
+} */
 
 </style>
