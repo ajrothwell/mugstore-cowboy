@@ -91,7 +91,7 @@ export default {
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
   /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
   /* text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black; */
-  font-size: 7rem;
+  font-size: 6rem;
   line-height: .85;
   text-transform: uppercase;
 }
@@ -101,10 +101,17 @@ export default {
   padding: 1rem;
 }
 
+.item-name {
+  font-size: 1.4rem;
+}
+
 .item-title {
   font-size: 1.4rem;
   padding: 1rem;
   min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 @media (max-width: 600px) {
@@ -116,6 +123,11 @@ export default {
   .main-app {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .home-photo {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -132,6 +144,11 @@ export default {
   .carousel-holder {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .home-photo {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 

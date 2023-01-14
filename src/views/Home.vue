@@ -18,7 +18,7 @@
                 <div
                   v-for="mug in mugsPreview"
                   :key="mug.id"
-                  class="column is-8 is-offset-2"
+                  class="column is-10 is-offset-1 home-photo"
                 >
                   <photo
                     :item="mug.fields"
@@ -42,7 +42,7 @@
                 <div
                   v-for="coaster in coastersPreview"
                   :key="coaster.id"
-                  class="column is-8 is-offset-2"
+                  class="column is-10 is-offset-1 home-photo"
                   >
                   <photo
                     :item="coaster.fields"
