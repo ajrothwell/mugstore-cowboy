@@ -38,7 +38,7 @@ export default {
           console.log('error');
         } else {
           response.data.key = source.id;
-          console.log('no error, source:', source, 'source.id:', source.id, 'response.data:', response.data);
+          // console.log('no error, source:', source, 'source.id:', source.id, 'response.data:', response.data);
           store.commit('setSourceData', response.data);
         }
       });

@@ -28,6 +28,16 @@ const routes = [
     name: 'Coasters',
     component: () => import(/* webpackChunkName: "about" */ '../views/Coasters.vue'),
   },
+  {
+    path: '/mug/:mugId',
+    name: 'Mug',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Mug.vue'),
+  },
+  {
+    path: '/coaster/:coasterId',
+    name: 'Coaster',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Coaster.vue'),
+  },
 ];
 
 const router = new VueRouter({

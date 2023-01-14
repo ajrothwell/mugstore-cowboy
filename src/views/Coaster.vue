@@ -3,34 +3,30 @@
     <section class="section">
       <div class="container">
         <h1 class="title">
-          Mugstore Cowboy Mugs
+          {{ currentCoaster.fields.name }} Coaster
         </h1>
       </div>
     </section>
-    
+
     <section>
       <div class="container">
-        <p class="subtitle">
+        <!-- <p class="subtitle">
           Mugs
-        </p>
-        <div class="columns">
+        </p> -->
+        <!-- <div class="columns">
           <div
             v-for="mug in mugsPreview"
             :key="mug.id"
             class="column is-3"
           >
-            <router-link
-              :to="'/mug/'+mug.fields.id"
+            {{ mug.fields.name }}
+            <photo
+              :item="mug.fields"
             >
-              {{ mug.fields.name }}
-              <photo
-                :item="mug.fields"
-              >
-              </photo>
+            </photo>
 
-            </router-link>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -57,9 +53,13 @@ export default {
   //   };
   // },
   computed: {
-    mugsPreview() {
-      // console.log('mugsPreview computed, this.$store.state.sources.mugs.data:', this.$store.state.sources.mugs.data);
-      return this.$store.state.sources.mugs.data;
+    coastersData() {
+      return this.$store.state.sources.coasters.data;
+    },
+    currentCoaster() {
+      let coaster = this.coastersData.filter(coaster => coaster.fields.id == this.$route.params.coasterId)[0];
+      console.log('currentCoaster computed, coaster:', coaster, 'this.coastersData:', this.coastersData, 'this.$route.params.coasterId:', this.$route.params.coasterId);
+      return coaster;
     },
   },
 };

@@ -19,13 +19,15 @@
             :key="coaster.id"
             class="column is-3"
           >
-            {{ coaster.fields.name }}
-            <photo
-              :item="coaster.fields"
+            <router-link
+              :to="'/coaster/'+coaster.fields.id"
             >
-            </photo>
-            <!-- <img :src="imgsrc"></img> -->
-
+              {{ coaster.fields.name }}
+              <photo
+                :item="coaster.fields"
+              >
+              </photo>
+            </router-link>
           </div>
         </div>
       </div>
@@ -44,18 +46,7 @@ export default {
     Photo,
     // PhotoCarousel,
   },
-  // data() {
-  //   return {
-  //     sources: {
-  //       mugs: [],
-  //     },
-  //   };
-  // },
   computed: {
-    mugsPreview() {
-      // console.log('mugsPreview computed, this.$store.state.sources.mugs.data:', this.$store.state.sources.mugs.data);
-      return this.$store.state.sources.mugs.data.slice(0, 3);
-    },
     coastersPreview() {
       return this.$store.state.sources.coasters.data.slice(0, 3);
     },

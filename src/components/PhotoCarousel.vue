@@ -7,6 +7,7 @@
           class="button square-button"
           @click="changePhotoNumber('down')"
         >
+          <!-- <i class="fa-solid fa-user"></i> -->
           <font-awesome-icon icon="arrow-left" />
         </button>
       </div>
@@ -33,6 +34,7 @@
           class="button square-button"
           @click="changePhotoNumber('up')"
         >
+          <!-- <i class="fa-solid fa-user"></i> -->
           <font-awesome-icon icon="arrow-right" />
         </button>
       </div>
@@ -62,27 +64,28 @@ export default {
     };
   },
   computed: {
-    allPics() {
-      const allPics = {};
-      for (let i = 0; i < 10; i++) {
-        if (this.item.fields[`Date${i}`]) {
-          this.item.fields[`PicsDate${i}`].date = this.item.fields[`Date${i}`];
-          allPics[this.item.fields[`Date${i}`]] = this.item.fields[`PicsDate${i}`];
-        }
-      }
-      return allPics;
-    },
+    // allPics() {
+    //   const allPics = {};
+    //   for (let i = 0; i < 10; i++) {
+    //     if (this.item.fields[`Date${i}`]) {
+    //       this.item.fields[`PicsDate${i}`].date = this.item.fields[`Date${i}`];
+    //       allPics[this.item.fields[`Date${i}`]] = this.item.fields[`PicsDate${i}`];
+    //     }
+    //   }
+    //   return allPics;
+    // },
     pictures() {
-      const pictures = [];
-      for (const pics of Object.keys(this.allPics)) {
-        // console.log('in pictures, pics:', pics);
-        for (const pic of this.allPics[pics]) {
-          console.log('in pictures, this.allPics[pics]:', this.allPics[pics], 'pic:', pic);
-          pic.date = pics;
-          pictures.push(pic);
-        }
-      }
-      return pictures;
+      // const pictures = [];
+      // for (const pics of Object.keys(this.allPics)) {
+      //   // console.log('in pictures, pics:', pics);
+      //   for (const pic of this.allPics[pics]) {
+      //     console.log('in pictures, this.allPics[pics]:', this.allPics[pics], 'pic:', pic);
+      //     pic.date = pics;
+      //     pictures.push(pic);
+      //   }
+      // }
+      // return pictures;
+      return this.item.fields.pictures;
     },
     picsLength() {
       return this.pictures.length;
@@ -137,67 +140,67 @@ table {
   width: 46px;
 }
 
-.image-div {
-  // min-height: 540px;
+/* .image-div {
+  min-height: 540px;
 }
 
-// th {
-//   background: #ffffff !important;
-// }
-//
-// tr:nth-child(odd) {
-//   background: #eee;
-// }
-//
-// .center {
-//   text-align: center;
-// }
-//
-// .table-text {
-//   font-family: "OpenSans-Regular", "Open Sans", sans-serif;
-//   font-size: 14px;
-// }
-//
-// .table-header-text {
-//   font-family: "OpenSans-SemiBold", "Open Sans SemiBold", "Open Sans", sans-serif;
-//   font-size: 14px;
-// }
-//
-// h3 {
-//   font-family: "Montserrat-SemiBold", "Montserrat SemiBold", "Montserrat", sans-serif;
-//   font-weight: 650;
-//   font-size: 24px;
-//   padding-top: 14px;
-//   padding-bottom: 14px;
-// }
-//
-// .section-heading {
-//   margin-top: 14px;
-// }
-//
-// .no-wrap {
-//   white-space: nowrap;
-// }
-//
-// .no-margins {
-//   margin: 0px;
-//   margin-bottom: 0px !important;
-// }
-//
-// .top-margins {
-//   margin-top: 10px;
-// }
-//
-// .main-content {
-//   font-size: 14px,
-// }
-//
-// .td-style {
-//   font-size: 14px !important;
-// }
-//
-// .td-textbox {
-//   padding-left: 2rem;
-// }
+th {
+  background: #ffffff !important;
+}
+
+tr:nth-child(odd) {
+  background: #eee;
+}
+
+.center {
+  text-align: center;
+}
+
+.table-text {
+  font-family: "OpenSans-Regular", "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.table-header-text {
+  font-family: "OpenSans-SemiBold", "Open Sans SemiBold", "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+h3 {
+  font-family: "Montserrat-SemiBold", "Montserrat SemiBold", "Montserrat", sans-serif;
+  font-weight: 650;
+  font-size: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.section-heading {
+  margin-top: 14px;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.no-margins {
+  margin: 0px;
+  margin-bottom: 0px !important;
+}
+
+.top-margins {
+  margin-top: 10px;
+}
+
+.main-content {
+  font-size: 14px,
+}
+
+.td-style {
+  font-size: 14px !important;
+}
+
+.td-textbox {
+  padding-left: 2rem;
+} */
 
 </style>
