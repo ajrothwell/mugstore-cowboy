@@ -132,7 +132,7 @@ export default {
 
 @media (min-width: 601px) and (max-width: 767px) {
   .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .main-app {
