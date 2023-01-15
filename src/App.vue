@@ -91,9 +91,9 @@ h1 {
   /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
   font-family: rowdies;
   color: #a068e8;
-  -webkit-text-stroke: 0.001rem black;
+  /* -webkit-text-stroke: 0.001rem black; */
   /* -webkit-text-stroke: 1px black; */
-  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
   /* text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black; */
   font-size: 6rem;
