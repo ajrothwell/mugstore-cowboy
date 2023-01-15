@@ -8,15 +8,16 @@
       <!-- <section class="section"> -->
       <section>
         <div class="container has-text-centered">
-          <h1 class="title">
-            Mugstore Cowboy
-          </h1>
           <div id="nav">
             <router-link to="/">Home</router-link> |
             <router-link to="/about">About</router-link> |
             <router-link to="/Mugs">Mugs</router-link> |
             <router-link to="/Coasters">Coasters</router-link>
           </div>
+          <h1 class="title">
+            Mugstore Cowboy
+          </h1>
+          
         </div>
       </section>
 

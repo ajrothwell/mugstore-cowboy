@@ -25,7 +25,6 @@
         </button>
       </div>
     </section>
-  <!-- </div> -->
 </template>
 
 <script>
@@ -49,7 +48,7 @@ export default {
   },
   methods:{
     buyItem() {
-      console.log('buyItem is running');
+      // console.log('buyItem is running');
       window.location.href = this.currentMug.fields.square;
     },
   },
