@@ -3,7 +3,7 @@
     
     <div
       v-if="picsLength"
-      >
+    >
       <!-- class="column is-8 has-text-centered" -->
       <div class="image-div">
         <img

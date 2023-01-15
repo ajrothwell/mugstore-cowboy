@@ -1,30 +1,53 @@
 <template>
-  <!-- <div> -->
-    <section>
-      <div class="container has-text-centered">
-        <h2 class="item-name">
+  <section>
+    
+    <div class="container columns mt-4 mb-4">
+      <div class="column is-3 pt-1 pb-1">
+        <router-link
+          to="/Mugs"
+          class="item-page-item-title"
+        >
+          <button
+            class="button"
+          >
+            <font-awesome-icon icon="arrow-left" />
+            <div class="pl-2">Back to Mugs</div>
+          </button>
+        </router-link>
+      </div>
+      <div class="column is-6 has-text-centered pt-1 pb-1">
+        <h2 class="item-page-item-title">
           {{ currentMug.fields.name }} Mug
         </h2>
+      </div>
+    </div>
 
-        <div class="columns">
-          <div class="column is-8 is-offset-2 carousel-holder">
+    <div class="container columns">
+      <div class="column is-7">
+
+        <!-- <div class="columns">
+          <div class="column is-10 is-offset-1 carousel-holder"> -->
             <photo-carousel
               :item="currentMug"
             >
             </photo-carousel>
-          </div>
-        </div>
+          <!-- </div>
+        </div> -->
       </div>
 
-      <div class="container has-text-centered buy-button-container">
-        <button
-          class="button"
-          @click="buyItem"
-        >
-          Add {{ currentMug.fields.name }} to Cart
-        </button>
+      <div class="column is-5">
+        <div class="container has-text-centered mt-4">
+          <button
+            class="button is-multiline"
+            @click="buyItem"
+          >
+            Add {{ currentMug.fields.name }} to Square Site Cart
+          </button>
+        </div>  
       </div>
-    </section>
+    </div>
+    
+  </section>
 </template>
 
 <script>
@@ -42,13 +65,11 @@ export default {
     },
     currentMug() {
       let mug = this.mugsData.filter(mug => mug.fields.id == this.$route.params.mugId)[0];
-      // console.log('currentMug computed, mug:', mug, 'this.mugsData:', this.mugsData, 'this.$route.params.mugId:', this.$route.params.mugId);
       return mug;
     },
   },
   methods:{
     buyItem() {
-      // console.log('buyItem is running');
       window.location.href = this.currentMug.fields.square;
     },
   },

@@ -3,3 +3,144 @@
   font-family: 'rowdies';
   src: url('~@/assets/fonts/Rowdies-Regular.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'eastman';
+  src: url('~@/assets/fonts/EastmanRoman-Bold.otf') format('truetype');
+}
+
+h1 {
+  margin-bottom: 0rem !important;
+}
+
+.full-app {
+  font-family: rowdies;
+  height: 100%;
+  min-height: 100vh;
+  background-color: black;
+  padding: 1.5rem;
+}
+
+.main-app {
+  background-color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: .5rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  font-family: rowdies;
+  color: #a068e8;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 6rem;
+  line-height: .85;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.button.is-multiline {
+  min-height: 2.25em;
+  white-space: unset;
+  height: auto;
+  flex-direction: column;
+}
+
+/** This isn't the actual suggested CSS - but it is just a quick fix to replicate the functionality**/
+// .button.is-multiline .icon {
+//   margin: 0! important;
+// }
+
+.item-page-item-title {
+  font-size: 1.4rem;
+}
+
+.item-title {
+  font-size: 1.4rem;
+  padding: 1rem;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@media (max-width: 600px) {
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .main-app {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .home-photo {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .main-app {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .carousel-holder {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .home-photo {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .full-app {
+    padding: 0rem;
+  }
+
+  .item-title {
+    min-height: 0px;
+  }
+}
+
+#nav {
+  padding: 10px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.circle {
+  border-radius:50%;
+}
+
+.rounded-square {
+  border-radius: 5%;
+}
+
+.columns {
+  flex-wrap: wrap;
+}
+
+// .buy-button-container {
+//   margin-top: 1rem;
+// }

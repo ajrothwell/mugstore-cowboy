@@ -1,29 +1,53 @@
 <template>
-  <!-- <div> -->
-    <section>
-      <div class="container has-text-centered">
-        <h2 class="item-name">
+  <section>
+
+    <div class="container columns mt-4 mb-4">
+      <div class="column is-3 pt-1 pb-1">
+        <router-link
+          to="/Coasters"
+          class="item-page-item-title"
+        >
+          <button
+            class="button"
+          >
+            <font-awesome-icon icon="arrow-left" />
+            <div class="pl-2">Back to Coasters</div>
+          </button>
+        </router-link>
+      </div>
+      <div class="column is-6 has-text-centered pt-1 pb-1">
+        <h2 class="item-page-item-title">
           {{ currentCoaster.fields.name }} Coaster
         </h2>
-        <div class="columns">
-          <div class="column is-8 is-offset-2">
+      </div>
+    </div>
+
+    <div class="container columns">
+      <div class="column is-7">
+
+        <!-- <div class="columns">
+          <div class="column is-10 is-offset-1 carousel-holder"> -->
             <photo-carousel
               :item="currentCoaster"
             >
             </photo-carousel>
-          </div>
-        </div>
+          <!-- </div>
+        </div> -->
       </div>
 
-      <div class="container has-text-centered buy-button-container">
-        <button
-          class="button"
-          @click="buyItem"
-        >
-          Add {{ currentCoaster.fields.name }} to Cart
-        </button>
+      <div class="column is-5">
+        <div class="container has-text-centered mt-4">
+          <button
+            class="button is-multiline"
+            @click="buyItem"
+          >
+            Add {{ currentCoaster.fields.name }} to Square Site Cart
+          </button>
+        </div>  
       </div>
-    </section>
+    </div>
+    
+  </section>
 </template>
 
 <script>
