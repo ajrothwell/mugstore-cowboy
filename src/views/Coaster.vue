@@ -23,7 +23,7 @@
 import PhotoCarousel from '@/components/PhotoCarousel.vue';
 
 export default {
-  name: 'Home',
+  name: 'Coaster',
   components: {
     PhotoCarousel,
   },

@@ -68,6 +68,10 @@ export default {
 
 <style>
 
+h1 {
+  margin-bottom: 0rem !important;
+}
+
 .full-app {
   height: 100%;
   min-height: 100vh;
@@ -163,7 +167,7 @@ export default {
 }
 
 #nav {
-  padding: 20px;
+  padding: 10px;
 }
 
 #nav a {
@@ -185,6 +189,10 @@ export default {
 
 .columns {
   flex-wrap: wrap;
+}
+
+.buy-button-container {
+  margin-top: 1rem;
 }
 
 </style>
