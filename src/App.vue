@@ -88,7 +88,8 @@ h1 {
 
 .title {
   /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  font-family: rowdies;
   color: #a068e8;
   -webkit-text-stroke: 0.001rem black;
   /* -webkit-text-stroke: 1px black; */

@@ -3,6 +3,8 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+import './assets/sass/style.scss';
+
 Vue.config.productionTip = false;
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
