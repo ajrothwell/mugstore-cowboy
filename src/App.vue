@@ -51,8 +51,9 @@ export default {
       let source = this.sources[sourceName];
       console.log('in App.vue created loop, sourceName:', sourceName, 'source:', source);
       let params = {};
+      let headers = source.options.headers;
       let store = this.$store;
-      axios.get(source.url, { params }).then(function(response, error) {
+      axios.get(source.url, { params, headers }).then(function(response, error) {
         if (error) {
           console.log('error');
         } else {

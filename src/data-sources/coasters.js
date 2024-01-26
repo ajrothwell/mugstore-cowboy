@@ -3,9 +3,12 @@ export default {
   type: 'http-get',
   dependent: 'none',
   resettable: false,
-  url: `https://api.airtable.com/v0/appeAGPBIv4HcRc0t/coasters?api_key=${process.env.VUE_APP_COASTERS_AIRTABLE_API_KEY}`,
+  url: `https://api.airtable.com/v0/appeAGPBIv4HcRc0t/coasters`,
   options: {
     params: {
+    },
+    headers: {
+      'Authorization': 'Bearer ' + process.env.VUE_APP_COASTERS_AIRTABLE_ACCESS_TOKEN,
     },
   },
 };
